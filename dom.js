@@ -10,6 +10,12 @@
 // Find the Google search button and store it in a variable.
 // Modify the text of the button so that it says "Yahooo!" instead.
 
+var img = document.getElementById('hplogo');
+var yahooImg = img.src
+img.src = 'http://images.techhive.com/images/article/2013/06/yahoo_logo_large-100044513-large.jpg';
+var searchText = document.getElementById('fkbx-text');
+searchText.innerHTML = "search for something" 
+
 // EXERCISE: About Me
 
 // Cuz every webpage needs an "About" section.
@@ -24,11 +30,11 @@
 // <body>
 //   <h1>About Me</h1>
 
-//   <ul>
-//     <li>Nickname: <span id="nickname"></span>
-//     <li>Favorites:  <span id="favorites"></span>
-//     <li>Hometown: <span id="hometown"></span>
-//    </ul>
+  // <ul>
+  //   <li>Nickname: <span id="nickname"></span>
+  //   <li>Favorites:  <span id="favorites"></span>
+  //   <li>Hometown: <span id="hometown"></span>
+  //  </ul>
 
 //  </body>
 // </html>
@@ -38,6 +44,25 @@
 // Replace each of the spans (nickname, favorites, hometown) with your own information.
 // Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
 // Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+
+var pageNode = document.getElementsByTagName('body')[0];
+pageNode.style.fontFamily = 'Arial, sans-serif';
+
+var nickname = document.getElementById('nickname');
+var favorites = document.getElementById('favorites');
+var hometown = document.getElementById('hometown');
+
+nickname.innerHTML = "Em";
+favorites.innerHTML = "Coding, Sports, and DIY Projects";
+hometown.innerHTML = "Toronto";
+
+var listItem = document.getElementsByTagName('li');
+
+for (var i = 0; i < listItem.length; i++) {
+  listItem[i].className = "listitem";
+	listItem[i].style.color = "red";
+}
+
 
 // EXERCISE: The Book List
 
@@ -50,3 +75,8 @@
 // Bonus: Use a ul and li to display the books.
 // Bonus: add a property to each book with the URL of the book cover, and add an img element for each book on the page.
 // Bonus: Change the style of the book depending on whether you have read it or not.
+
+
+
+
+
